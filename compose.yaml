@@ -1,0 +1,15 @@
+services:
+  web:
+    build:
+      context: .
+      target: production
+    image: lab14-web:2.0
+    ports:
+      - "3100:3000"
+
+  test:
+    build:
+      context: .
+      target: test
+    profiles:
+      - test

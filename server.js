@@ -3,6 +3,7 @@ const Database = require("better-sqlite3");
 const swaggerUi = require("swagger-ui-express");
 const path = require("path");
 const swaggerSpec = require("./swagger");
+const packageInfo = require("./package.json");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -147,6 +148,19 @@ app.get("/api/status", (req, res) => {
     status: "success",
     message: "Сервер работает",
     containerized: process.env.CONTAINERIZED === "true"
+  });
+});
+
+app.get("/api/info", (req, res) => {
+  res.json({
+    name: "Мудл",
+    description: "Сайт учебных курсов",
+    version: packageInfo.version,
+    node: process.version,
+    port: Number(PORT),
+    environment: process.env.NODE_ENV || "development",
+    containerized: process.env.CONTAINERIZED === "true",
+    courses: db.prepare("SELECT COUNT(*) AS count FROM courses").get().count
   });
 });
 

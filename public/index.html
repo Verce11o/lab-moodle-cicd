@@ -11,7 +11,7 @@
     <img class="site-logo" src="images/logo.png" alt="Логотип Мудл" width="128" height="128">
     <div>
       <h1>Мудл - главная</h1>
-      <p>Сайт учебных курсов</p>
+      <p>Сайт учебных курсов в Docker-контейнере</p>
     </div>
   </header>
   <nav aria-label="Основная навигация">
@@ -22,6 +22,15 @@
     <a href="/api-docs">API (Swagger)</a>
   </nav>
   <main>
+    <section class="status">
+      <h2>Состояние приложения</h2>
+      <dl class="status-list">
+        <div><dt>Версия</dt><dd id="info-version">...</dd></div>
+        <div><dt>Среда запуска</dt><dd id="info-place">...</dd></div>
+        <div><dt>Порт приложения</dt><dd id="info-port">...</dd></div>
+        <div><dt>Курсов в базе</dt><dd id="info-courses">...</dd></div>
+      </dl>
+    </section>
     <section>
       <h2>О сайте</h2>
       <p>Мудл - учебный сайт. Здесь можно посмотреть курсы,
@@ -70,5 +79,6 @@
   <footer>
     <p>Рашитов Таймас</p>
   </footer>
+  <script src="js/info.js"></script>
 </body>
 </html>

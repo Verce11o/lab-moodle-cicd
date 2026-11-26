@@ -1,6 +1,6 @@
 {
   "name": "web-project-4",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Мудл: сайт учебных курсов с REST API и Swagger",
   "main": "server.js",
   "scripts": {

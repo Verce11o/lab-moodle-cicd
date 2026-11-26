@@ -39,6 +39,14 @@ describe("Мудл: тесты Web-приложения", () => {
     assert.strictEqual(data.status, "success");
   });
 
+  it("GET /api/info возвращает информацию о приложении", async () => {
+    const response = await fetch(baseUrl + "/api/info");
+    assert.strictEqual(response.status, 200);
+    const data = await response.json();
+    assert.strictEqual(data.name, "Мудл");
+    assert.strictEqual(data.courses, 3);
+  });
+
   it("GET /api/courses возвращает три курса", async () => {
     const response = await fetch(baseUrl + "/api/courses");
     assert.strictEqual(response.status, 200);
