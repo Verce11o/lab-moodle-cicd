@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Курсы - Мудл</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <img class="site-logo" src="images/logo.png" alt="Логотип Мудл" width="128" height="128">
+    <div>
+      <h1>Мудл - курсы</h1>
+      <p>Сайт учебных курсов</p>
+    </div>
+  </header>
+  <nav aria-label="Основная навигация">
+    <a href="index.html">Главная</a>
+    <a href="about.html">О проекте</a>
+    <a href="labs.html" aria-current="page">Курсы</a>
+    <a href="contacts.html">Контакты</a>
+    <a href="/api-docs">API (Swagger)</a>
+  </nav>
+  <main>
+    <section id="catalog">
+      <h2>Список курсов</h2>
+      <div class="table-wrapper" role="region" aria-label="Список курсов" tabindex="0">
+        <table>
+          <caption>Учебные курсы и практические задания</caption>
+          <thead>
+            <tr>
+              <th scope="col">Курс</th>
+              <th scope="col">Модули</th>
+              <th scope="col">Практическая работа</th>
+              <th scope="col">Действия</th>
+            </tr>
+          </thead>
+          <tbody id="courses-body">
+            <tr><td colspan="4">Загрузка...</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p id="message" class="message" role="status"></p>
+    </section>
+    <section id="course-editor">
+      <h2 id="form-title">Добавить курс</h2>
+      <form id="course-form" novalidate>
+        <p>
+          <label for="title">Название курса</label>
+          <input type="text" id="title" name="title" maxlength="100" required>
+        </p>
+        <p>
+          <label for="modules">Количество модулей</label>
+          <input type="number" id="modules" name="modules" min="1" max="20" value="3" required>
+        </p>
+        <p>
+          <label for="practice">Практическая работа</label>
+          <input type="text" id="practice" name="practice" maxlength="150" required>
+        </p>
+        <p>
+          <label for="program">Программа курса</label>
+          <textarea id="program" name="program" rows="4" maxlength="1000"></textarea>
+          <small>Каждая тема с новой строки.</small>
+        </p>
+        <p class="form-actions">
+          <button type="submit" id="submit-button">Добавить курс</button>
+          <button type="button" id="cancel-button" class="secondary" hidden>Отмена</button>
+        </p>
+      </form>
+    </section>
+    <section id="programs">
+      <h2>Программы курсов</h2>
+      <div id="programs-list"></div>
+    </section>
+  </main>
+  <aside>
+    <p><a href="about.html">Подробнее о проекте</a> |
+      <a href="contacts.html">Задать вопрос</a> |
+      <a href="/api-docs">Документация API</a></p>
+  </aside>
+  <footer>
+    <p>Рашитов Таймас</p>
+  </footer>
+  <script src="js/courses.js"></script>
+</body>
+</html>

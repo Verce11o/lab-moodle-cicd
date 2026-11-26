@@ -1,0 +1,16 @@
+{
+  "name": "web-project-4",
+  "version": "1.0.0",
+  "description": "Мудл: сайт учебных курсов с REST API и Swagger",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "better-sqlite3": "^13.2.0",
+    "express": "^5.3.0",
+    "swagger-ui-express": "^5.0.1"
+  }
+}

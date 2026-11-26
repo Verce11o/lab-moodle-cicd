@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты - Мудл</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <img class="site-logo" src="images/logo.png" alt="Логотип Мудл" width="128" height="128">
+    <div>
+      <h1>Мудл - контакты</h1>
+      <p>Сайт учебных курсов</p>
+    </div>
+  </header>
+  <nav aria-label="Основная навигация">
+    <a href="index.html">Главная</a>
+    <a href="about.html">О проекте</a>
+    <a href="labs.html">Курсы</a>
+    <a href="contacts.html" aria-current="page">Контакты</a>
+    <a href="/api-docs">API (Swagger)</a>
+  </nav>
+  <main>
+    <article>
+      <section id="feedback">
+        <h2>Форма обратной связи</h2>
+        <form action="contacts.html#feedback" method="get">
+          <p>
+            <label for="full-name">ФИО</label>
+            <input type="text" id="full-name" name="full-name"
+              autocomplete="name" required minlength="3" maxlength="100">
+          </p>
+          <p>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email"
+              autocomplete="email" required maxlength="120">
+          </p>
+          <p>
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel"
+              required pattern="\+?[0-9]{10,15}" maxlength="16"
+              title="От 10 до 15 цифр, можно с плюсом в начале"
+              aria-describedby="phone-hint">
+            <small id="phone-hint">10-15 цифр, можно с + в начале.</small>
+          </p>
+          <p>
+            <label for="subject">Тема сообщения</label>
+            <input type="text" id="subject" name="subject"
+              required minlength="3" maxlength="120">
+          </p>
+          <p>
+            <label for="message">Сообщение</label>
+            <textarea id="message" name="message" rows="5"
+              required minlength="10" maxlength="2000"></textarea>
+          </p>
+          <p class="form-actions">
+            <button type="submit">Отправить</button>
+            <button type="reset">Очистить</button>
+          </p>
+        </form>
+      </section>
+    </article>
+  </main>
+  <aside>
+    <p><a href="labs.html#programs">Программы курсов</a></p>
+  </aside>
+  <footer>
+    <p>Рашитов Таймас</p>
+  </footer>
+</body>
+</html>
