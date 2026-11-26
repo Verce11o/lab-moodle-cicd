@@ -65,4 +65,9 @@ describe("Мудл: тесты Web-приложения", () => {
     });
     assert.strictEqual(response.status, 400);
   });
+
+  it("DELETE /api/courses/1 удаляет курс", async () => {
+    const response = await fetch(baseUrl + "/api/courses/1", { method: "DELETE" });
+    assert.strictEqual(response.status, 200);
+  });
 });
