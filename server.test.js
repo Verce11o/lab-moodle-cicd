@@ -34,7 +34,7 @@ describe("Мудл: тесты Web-приложения", () => {
 
   it("GET /api/status возвращает success", async () => {
     const response = await fetch(baseUrl + "/api/status");
-    assert.strictEqual(response.status, 201);
+    assert.strictEqual(response.status, 200);
     const data = await response.json();
     assert.strictEqual(data.status, "success");
   });
