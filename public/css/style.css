@@ -131,6 +131,35 @@ img {
   border-radius: 10px;
 }
 
+.status {
+  border-left: 6px solid var(--ok);
+}
+
+.status-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 0;
+}
+
+.status-list div {
+  padding: 12px;
+  border-radius: 10px;
+  background-color: var(--light);
+}
+
+.status-list dt {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.status-list dd {
+  margin: 0;
+  color: var(--dark);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

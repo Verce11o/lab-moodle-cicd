@@ -97,6 +97,34 @@ module.exports = {
         }
       }
     },
+    "/api/info": {
+      get: {
+        tags: ["System"],
+        summary: "Информация о приложении",
+        responses: {
+          200: {
+            description: "Сведения о приложении",
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  properties: {
+                    name: { type: "string", example: "Мудл" },
+                    description: { type: "string", example: "Сайт учебных курсов" },
+                    version: { type: "string", example: "2.0.0" },
+                    node: { type: "string", example: "v22.0.0" },
+                    port: { type: "integer", example: 3000 },
+                    environment: { type: "string", example: "production" },
+                    containerized: { type: "boolean", example: true },
+                    courses: { type: "integer", example: 3 }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/courses": {
       get: {
         tags: ["Courses"],
